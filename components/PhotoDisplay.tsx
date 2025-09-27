@@ -17,16 +17,6 @@ const PhotoBox: React.FC<{ title: string; children: React.ReactNode; }> = ({ tit
 );
 
 const PhotoDisplay: React.FC<PhotoDisplayProps> = ({ originalPhoto, processedPhoto, isLoading }) => {
-  const handleDownload = () => {
-    if (!processedPhoto) return;
-    const link = document.createElement('a');
-    link.href = `data:image/jpeg;base64,${processedPhoto}`;
-    link.download = 'passport-photo.jpg';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-    
   return (
     <div className="w-full flex flex-col md:flex-row gap-6">
       <PhotoBox title="Original Photo">

@@ -30,7 +30,7 @@ export const fileToBase64 = (file: File): Promise<{ base64: string, mimeType: st
  */
 export const generatePassportPhoto = async (base64ImageData: string, mimeType: string): Promise<string> => {
   if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set.");
+    throw new Error("Configuration Error: The Google Gemini API key is missing. Please ensure the API_KEY environment variable is set for this application to function.");
   }
   
   if (!base64ImageData || !mimeType) {
