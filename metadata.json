@@ -1,0 +1,5 @@
+{
+  "name": " AI Passport Photo Generator",
+  "description": "Upload a picture and this application will transform it into a US passport, visa, or green card compliant photo with the correct dimensions and a plain white background using AI.",
+  "requestFramePermissions": []
+}
